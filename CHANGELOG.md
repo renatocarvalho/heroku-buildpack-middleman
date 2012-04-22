@@ -1,3 +1,9 @@
+## middleman v1 (2012-04-21)
+
+  * builds middleman sites for static hosting on Heroku
+
+# jekyll
+
 ## v21 (3/21/2012)
 
 Features:
