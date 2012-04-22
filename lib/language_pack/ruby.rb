@@ -454,7 +454,7 @@ params = CGI.parse(uri.query || "")
     end
   end
 
-  def generate_jekyll_site
+  def generate_middleman_site
     puts "Building middleman site"
     run("env PATH=$PATH bundle exec middleman build")
     unless $? == 0
