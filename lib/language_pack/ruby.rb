@@ -53,7 +53,7 @@ class LanguagePack::Ruby < LanguagePack::Base
       create_database_yml
       install_binaries
       run_assets_precompile_rake_task
-      generate_jekyll_site
+      generate_middleman_site
     end
   end
 
@@ -455,10 +455,10 @@ params = CGI.parse(uri.query || "")
   end
 
   def generate_jekyll_site
-    puts "Building jekyll site"
-    run("env PATH=$PATH bundle exec jekyll")
+    puts "Building middleman site"
+    run("env PATH=$PATH bundle exec middleman build")
     unless $? == 0
-      error "Failed to generate site with jekyll."
+      error "Failed to generate site with middleman."
     end
   end
 end
