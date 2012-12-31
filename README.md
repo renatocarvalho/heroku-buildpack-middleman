@@ -6,9 +6,6 @@ This is a [Heroku buildpack](http://devcenter.heroku.com/articles/buildpacks) fo
 Usage
 -----
 
-    $ git clone http://github.com/indirect/middleman-heroku-app.git mysite
-    $ cd mysite
-    $ heroku create --stack cedar --buildpack http://github.com/indirect/heroku-buildpack-middleman.git
     $ git push heroku master
 
 Hacking

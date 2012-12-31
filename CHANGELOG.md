@@ -2,7 +2,155 @@
 
   * builds middleman sites for static hosting on Heroku
 
-# jekyll
+## v45 (12/14/2012)
+
+Features:
+
+* Stop setting env vars in bin/release now that login-shell is released
+* Enable Invoke Dynamic on JRuby by default
+* GEM_PATH is now updated on each push
+
+## v44 (12/14/2012)
+
+Faulty Release
+
+## v43 (12/13/2012)
+
+Features:
+
+* Upgrade Bundler to 1.3.0.pre.2
+
+## v42 (11/26/2012)
+
+Features:
+
+* Upgrade Bundler to 1.2.2 to fix Ruby 2.0.0/YAML issues
+
+## v41 (11/1/2012)
+
+Features:
+
+* Enable ruby 2.0.0 support for testing
+
+## v40 (10/14/2012)
+
+Features:
+
+* Cache version of the buildpack we used to deploy
+* Purge cache when v38 is detected
+
+## v39 (10/14/2012)
+
+Bugfixes:
+
+* Don't display cache clearing message for new apps
+* Actually clear bundler cache on ruby version change
+
+## v38 (10/14/2012)
+
+Bugfixes:
+
+* Stop bundle cache from continually growing
+
+## v37 (10/12/2012)
+
+Bugfixes:
+
+* Remove temporary workaround from v36.
+* Clear bundler cache upon Ruby version change
+
+## v36 (10/12/2012)
+
+Bugfixes:
+
+* Always clear the cache for ruby 1.9.3 as a temporary workaround due to the security upgrade
+
+## v35 (9/19/2012)
+
+Features:
+
+* Upgrade to Bundler 1.2.1
+* Display bundle clean output
+* More resilent to rubygems.org API outages
+
+Bugfixes:
+
+* `bundle clean` works again
+
+## v34 (8/30/2012)
+
+Features:
+
+* Upgrade to Bundler 1.2.0
+
+## v33 (8/9/2012)
+
+Features:
+
+* Upgrade to Bundler 1.2.0.rc.2
+* vendor JDK7 for JRuby, but disable invoke dynamic
+
+## v29 (7/19/2012)
+
+Features:
+
+* support .profile.d/ruby.sh
+* sync stdout so that the buildpack streams even in non-interactive shells
+* Upgrade to Bundler 1.2.0.rc
+
+## v28 (7/16/2012)
+
+Features:
+
+* Vendor OpenJDK6 into slug when using JRuby
+* ruby version support for ruby 1.8.7 via bundler's ruby DSL
+
+Bugfixes:
+
+* sqlite3 error gets displayed again
+
+## v27 (6/14/2012)
+
+Bugfixes:
+
+* Remove `vendor/bundle` message only appears when dir actually exists
+
+## v26 (6/14/2012)
+
+Features:
+
+* print message when assets:precompile finishes successfully
+* Remove `vendor/bundle` if user commits it to their git repo.
+
+## v25 (6/12/2012)
+
+Features:
+
+* support "ruby-xxx-jruby-yyy" for jruby detection packages
+
+## v24 (6/7/2012)
+
+Features:
+
+* removes bundler cache in the slug, to minimize slug size (@stevenh512, #16)
+* optimize push time with caching
+
+## v23 (5/8/2012)
+
+Bugfixes:
+
+* fix ruby version bug with "fatal:-Not-a-git-repository"
+
+## v22 (5/7/2012)
+
+Features:
+
+* bundler 1.2.0.pre
+* ruby version support for ruby 1.9.2/1.9.3 via bundler's ruby DSL
+
+Deprecation:
+
+* ENV['RUBY_VERSION'] in favor of bundler's ruby DSL
 
 ## v21 (3/21/2012)
 
